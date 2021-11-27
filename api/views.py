@@ -7,7 +7,7 @@ from django.http import HttpResponse
 # Model Object - Single Student Data
 
 def student_detail(request):
-    stu = Student.objects.get(id=2)
+    stu = Student.objects.get(id=1)
     serializer = StudentSerializer(stu)
     json_data = JSONRenderer().render(serializer.data)
     
